@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { z } from "zod";
 
+import { useToast } from "~/components/ui/toast/use-toast";
 import type { IFormEmail } from "~/types/gobal";
 import { FormEmailSchema } from "~/utils/validate/formEmail";
 export default function useContact() {
@@ -29,6 +30,7 @@ export default function useContact() {
     }
   ];
   const [errors, setErrors] = useState<z.ZodIssue[]>([]);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,6 +45,10 @@ export default function useContact() {
           message: data["Message"]
         });
         const form = document.querySelector("form");
+        toast({
+          title: "Email sent Successfully",
+          description: new Date().toLocaleString()
+        });
         setErrors([]);
         form?.reset();
       } catch (error) {
