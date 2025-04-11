@@ -1,14 +1,14 @@
 import type { Route } from "./+types/home";
 
-import { HomePageRender } from "~/features/homepage/home";
+import { ContactPageRender } from "~/features/contact/contact";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Home" },
+    { title: "Contact" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
 
-export default function Home() {
-  return <HomePageRender />;
+export default function Contact() {
+  return <ContactPageRender />;
 }

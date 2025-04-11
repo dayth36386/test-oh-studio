@@ -1,14 +1,14 @@
 import type { Route } from "./+types/home";
 
-import { HomePageRender } from "~/features/homepage/home";
+import { ProfilePageRender } from "~/features/profile/profile";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Home" },
+    { title: "Profile" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
 
-export default function Home() {
-  return <HomePageRender />;
+export default function Profile() {
+  return <ProfilePageRender />;
 }
