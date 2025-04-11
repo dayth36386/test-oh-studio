@@ -5,7 +5,7 @@ import { ContactPageRender } from "~/features/contact/contact";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Contact" },
-    { name: "description", content: "Welcome to React Router!" },
+    { name: "description", content: "Welcome to React Router!" }
   ];
 }
 

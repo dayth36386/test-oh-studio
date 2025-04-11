@@ -10,7 +10,7 @@ export function HomePageRender() {
   useEffect(() => {
     getHomeAll();
     AOS.init({
-      once: true,
+      once: true
     });
   }, []);
 
@@ -44,26 +44,21 @@ export function HomePageRender() {
       </div>
 
       {data && data.length > 0 ? (
-        <div className="grid lg:grid-cols-2 gap-y-12 gap-x-8 w-full p-4">
+        <div className="grid lg:grid-cols-2 gap-y-12 gap-x-8 w-full xl:p-0 p-4">
           {data?.map((item, index) => (
-            <div key={index} className="w-full h-150 relative">
-              {index % 2 === 0 ? (
-                <img
-                  src={item.url}
-                  alt={`Cat ${index}`}
-                  className="object-cover w-full h-full rounded-xl drop-shadow-xl"
-                  data-aos="fade-right"
-                  data-aos-duration="1000"
-                />
-              ) : (
-                <img
-                  src={item.url}
-                  alt={`Cat ${index}`}
-                  className="object-cover w-full h-full rounded-xl drop-shadow-xl"
-                  data-aos="fade-left"
-                  data-aos-duration="1000"
-                />
-              )}
+            <div
+              key={index}
+              className="w-full h-150 relative overflow-hidden rounded-xl"
+            >
+              <img
+                src={item.url}
+                alt={item.id}
+                className={`object-cover w-full h-full drop-shadow-xl ${
+                  index % 2 === 0 ? "aos-fade-right" : "aos-fade-left"
+                }`}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-duration="1000"
+              />
             </div>
           ))}
         </div>

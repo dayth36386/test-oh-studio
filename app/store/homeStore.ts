@@ -19,5 +19,5 @@ export const useHomeStore = create<IHomeStore>((set) => ({
       console.error("Failed to fetch HomeStore by id:", error);
       throw error;
     }
-  },
+  }
 }));

@@ -11,5 +11,5 @@ export const homeAPI = {
       console.log(error);
       throw error;
     }
-  },
+  }
 };

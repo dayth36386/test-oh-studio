@@ -5,7 +5,7 @@ import { HomePageRender } from "~/features/homepage/home";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Home" },
-    { name: "description", content: "Welcome to React Router!" },
+    { name: "description", content: "Welcome to React Router!" }
   ];
 }
 

@@ -5,7 +5,7 @@ import { ProfilePageRender } from "~/features/profile/profile";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Profile" },
-    { name: "description", content: "Welcome to React Router!" },
+    { name: "description", content: "Welcome to React Router!" }
   ];
 }
 

@@ -22,14 +22,15 @@
   "rules": {
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
+    "comma-dangle": "off",
     "no-unused-vars": "off",
     "no-empty-pattern": "off",
     "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/no-unescaped-entities": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "off",
     "simple-import-sort/imports": [
       "error",
       {
