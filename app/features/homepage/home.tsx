@@ -53,9 +53,7 @@ export function HomePageRender() {
               <img
                 src={item.url}
                 alt={item.id}
-                className={`object-cover w-full h-full drop-shadow-xl ${
-                  index % 2 === 0 ? "aos-fade-right" : "aos-fade-left"
-                }`}
+                className="object-cover w-full h-full drop-shadow-xl"
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                 data-aos-duration="1000"
               />

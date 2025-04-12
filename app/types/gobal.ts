@@ -11,3 +11,12 @@ export interface IFormEmail {
   placeholder: string;
   typeInput: "input" | "textarea";
 }
+export interface ICards {
+  id: number;
+  content: React.ReactNode;
+}
+export interface IQuestion {
+  role: string;
+  companySize: string;
+  about: string;
+}

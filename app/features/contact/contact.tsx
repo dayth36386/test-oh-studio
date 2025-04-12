@@ -7,12 +7,9 @@ import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
-import { useHomeStore } from "~/store/homeStore";
 
 export function ContactPageRender() {
-  const { data, getHomeAll } = useHomeStore();
   useEffect(() => {
-    getHomeAll();
     AOS.init({
       once: true
     });
