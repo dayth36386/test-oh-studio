@@ -16,7 +16,7 @@ export const useHomeStore = create<IHomeStore>((set) => ({
       set({ data: response });
       return response;
     } catch (error) {
-      console.error("Failed to fetch HomeStore by id:", error);
+      console.error("Failed to fetch HomeStore get all", error);
       throw error;
     }
   }
